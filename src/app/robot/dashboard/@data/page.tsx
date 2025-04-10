@@ -1,7 +1,8 @@
 import { memo } from 'react';
+import Socket from '../_components/Socket';
 
 const Page = () => {
-  return <div>{process.env.NEXT_PUBLIC_ESP32_CAM_URL}</div>;
+  return <Socket />;
 };
 
 export default memo(Page);

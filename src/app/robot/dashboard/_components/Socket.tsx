@@ -7,7 +7,9 @@ const SocketWrapper = () => {
   const socketRef = useRef<WebSocket | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8081');
+    const ws = new WebSocket(
+      String(process.env.NEXT_PUBLIC_WEB_SOCKET_URL) ?? 'ws://localhost:8081'
+    );
     socketRef.current = ws;
     ws.onopen = () => {
       console.log('WebSocket connected');
@@ -16,7 +18,7 @@ const SocketWrapper = () => {
 
     ws.onmessage = event => {
       console.log('Message from server:', event.data);
-      setMessage(prev => event.data);
+      setMessage(event.data);
     };
 
     ws.onerror = err => console.error('WebSocket error', err);
@@ -27,7 +29,8 @@ const SocketWrapper = () => {
 
   const sendMessage = useCallback(() => {
     socketRef.current?.send('Hi ESP32!');
-  }, [socketRef]);
+  }, []);
+
   return (
     <div>
       <Button onClick={sendMessage}>Send Message</Button>

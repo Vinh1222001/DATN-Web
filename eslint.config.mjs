@@ -15,13 +15,17 @@ const eslintConfig = [
   // 👉 Tích hợp Prettier vào cấu hình
   {
     plugins: {
-      prettier: require('eslint-plugin-prettier')
+      prettier: (await import('eslint-plugin-prettier')).default,
+      'react-hooks': (await import('eslint-plugin-react-hooks')).default
     },
     rules: {
-      'prettier/prettier': 'error'
+      'prettier/prettier': 'error',
+      // 👉 Cảnh báo nếu thiếu deps trong Hooks
+      'react-hooks/exhaustive-deps': 'warn'
     }
   },
-  // 👉 Đảm bảo tắt xung đột giữa ESLint và Prettier
+
+  // 👉 Tắt xung đột giữa ESLint và Prettier
   ...compat.extends('prettier')
 ];
 
