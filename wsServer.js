@@ -5,6 +5,8 @@ const WebSocket = require('ws');
 const SERVER_IP = networkInterfaces()?.wlp2s0?.[0].address ?? 'localhost';
 const SERVER_PORT = 8081;
 
+console.log(networkInterfaces());
+
 const wss = new WebSocket.Server({ port: SERVER_PORT });
 
 console.log(`Web Socket is running on ws://${SERVER_IP}:${SERVER_PORT}/`);

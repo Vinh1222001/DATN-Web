@@ -21,7 +21,8 @@ const eslintConfig = [
     rules: {
       'prettier/prettier': 'error',
       // 👉 Cảnh báo nếu thiếu deps trong Hooks
-      'react-hooks/exhaustive-deps': 'warn'
+      'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off'
     }
   },
 
