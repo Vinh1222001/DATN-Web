@@ -1,9 +1,16 @@
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
 import { memo } from 'react';
 import { ILayoutProps } from 'ui';
 import AppSideBar from './_components/AppSidebar';
 import Flex from '@/components/ui/layouts/Flex';
 import Box from '@/components/ui/layouts/Box';
+import Header from './_components/Header';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Robot Dashboard',
+  description: ''
+};
 
 const Layout = (props: ILayoutProps) => {
   const { children } = props;
@@ -13,9 +20,7 @@ const Layout = (props: ILayoutProps) => {
       <SidebarProvider>
         <AppSideBar />
         <Box>
-          <header className="px-3">
-            <SidebarTrigger />
-          </header>
+          <Header />
           <Box className="p-3">{children}</Box>
         </Box>
       </SidebarProvider>

@@ -441,6 +441,13 @@
   dependencies:
     "@radix-ui/react-use-layout-effect" "1.1.1"
 
+"@radix-ui/react-label@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-label/-/react-label-2.1.3.tgz#de83641c90c57e58f0d1e1943d450dbc3936a23f"
+  integrity sha512-zwSQ1NzSKG95yA0tvBMgv6XPHoqapJCcg9nsUBaQQ66iRBhZNhlpaQG2ERYYX4O4stkYFK5rxj5NsWfO9CS+Hg==
+  dependencies:
+    "@radix-ui/react-primitive" "2.0.3"
+
 "@radix-ui/react-popper@1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-popper/-/react-popper-1.2.3.tgz#3b6ef3388fd209bb46341e1e40125b75f07f1304"
@@ -677,6 +684,37 @@
     postcss "^8.4.41"
     tailwindcss "4.1.3"
 
+"@tanstack/eslint-plugin-query@^5.72.2":
+  version "5.72.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/eslint-plugin-query/-/eslint-plugin-query-5.72.2.tgz#c0d84764e884905d6dfbc3585ef031d8de5f0f2a"
+  integrity sha512-JzfDu6fA/6jj25td+NxYSjiSC2kqo62uVWgquqUUOgzQK+/eJ2IH3pVDeIXrrhQ9VsaJEBeaJN4Lc0klnlVvGQ==
+  dependencies:
+    "@typescript-eslint/utils" "^8.18.1"
+
+"@tanstack/query-core@5.72.2":
+  version "5.72.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.72.2.tgz#448dbdc68c6c836d7b202eafdd1b89fb9379f3d4"
+  integrity sha512-fxl9/0yk3mD/FwTmVEf1/H6N5B975H0luT+icKyX566w6uJG0x6o+Yl+I38wJRCaogiMkstByt+seXfDbWDAcA==
+
+"@tanstack/query-devtools@5.72.2":
+  version "5.72.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-devtools/-/query-devtools-5.72.2.tgz#35a8bc7951d31cfdbbed1f7774909a61c60f35ef"
+  integrity sha512-mMKnGb+iOhVBcj6jaerCFRpg8pACStdG8hmUBHPtToeZzs4ctjBUL1FajqpVn2WaMxnq8Wya+P3Q5tPFNM9jQw==
+
+"@tanstack/react-query-devtools@^5.72.2":
+  version "5.72.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query-devtools/-/react-query-devtools-5.72.2.tgz#e84bd3ccfd3e21cb9b86d83ace13469e612ffde3"
+  integrity sha512-n53qr9JdHCJTCUba6OvMhwiV2CcsckngOswKEE7nM5pQBa/fW9c43qw8omw1RPT2s+aC7MuwS8fHsWT8g+j6IQ==
+  dependencies:
+    "@tanstack/query-devtools" "5.72.2"
+
+"@tanstack/react-query@^5.72.2":
+  version "5.72.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.72.2.tgz#677a2b239bfee2dbeb75c3f4dc541a8fffa33d6d"
+  integrity sha512-SVNHzyBUYiis+XiCl+8yiPZmMYei2AKYY94wM/zpvB5l1jxqOo82FQTziSJ4pBi96jtYqvYrTMxWynmbQh3XKw==
+  dependencies:
+    "@tanstack/query-core" "5.72.2"
+
 "@tybys/wasm-util@^0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.9.0.tgz#3e75eb00604c8d6db470bf18c37b7d984a0e3355"
@@ -703,6 +741,11 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
+
+"@types/lodash@^4.17.16":
+  version "4.17.16"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.16.tgz#94ae78fab4a38d73086e962d0b65c30d816bfb0a"
+  integrity sha512-HX7Em5NYQAXKW+1T+FiuG27NGwzJfCX3s1GjOa7ujxZa52kjJLOr4FUxT+giF6Tgxv1e+/czV/iTtBw27WTU9g==
 
 "@types/node@^20":
   version "20.17.30"
@@ -786,7 +829,7 @@
     semver "^7.6.0"
     ts-api-utils "^2.0.1"
 
-"@typescript-eslint/utils@8.29.1":
+"@typescript-eslint/utils@8.29.1", "@typescript-eslint/utils@^8.18.1":
   version "8.29.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-8.29.1.tgz#3d206c8c8def3527a8eb0588e94e3e60f7e167c9"
   integrity sha512-QAkFEbytSaB8wnmB+DflhUPz6CLbFWE2SnSCrRMEa+KnXIzDYbpsn++1HGvnfAsUY44doDXmvRkO5shlM/3UfA==
@@ -2344,6 +2387,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.4.0:
   version "1.4.0"

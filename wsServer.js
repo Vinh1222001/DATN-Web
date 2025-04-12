@@ -20,10 +20,11 @@ wss.on('connection', (ws, req) => {
     // Gửi lại cho tất cả client khác
     wss.clients.forEach(client => {
       if (client !== ws && client.readyState === WebSocket.OPEN) {
+        console.log(message);
         client.send(message.toString());
       }
     });
   });
 
-  ws.send('Connected to WebSocket server');
+  // ws.send('Connected to WebSocket server');
 });

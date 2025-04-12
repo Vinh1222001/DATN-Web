@@ -1,27 +1,27 @@
+'use client';
 import Box from '@/components/ui/layouts/Box';
+import { VideoStreamName } from '@/constants/video';
+import { useVideoStream } from '@/hooks/core/useVideoStream';
 import Image from 'next/image';
-import { forwardRef, memo } from 'react';
+import { memo } from 'react';
 
 interface IProps {
   url: string;
   alt?: string;
 }
 
-const VideoStream = forwardRef<HTMLImageElement, IProps>((props, ref) => {
+const VideoStream = (props: IProps) => {
+  const { alt, ...rest } = useVideoStream({
+    name: VideoStreamName.ESP32_CAM,
+    url: props.url,
+    alt: props.alt
+  });
+
   return (
     <Box className={'aspect-square bg-neutral-200'} width={'full'}>
-      <Image
-        ref={ref}
-        src={props.url}
-        alt={props.alt ?? 'video stream'}
-        unoptimized
-        width={200}
-        height={200}
-      />
+      <Image {...rest} alt={alt} unoptimized width={200} height={200} />
     </Box>
   );
-});
-
-VideoStream.displayName = 'VideoStream';
+};
 
 export default memo(VideoStream);

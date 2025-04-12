@@ -16,13 +16,17 @@ const eslintConfig = [
   {
     plugins: {
       prettier: (await import('eslint-plugin-prettier')).default,
-      'react-hooks': (await import('eslint-plugin-react-hooks')).default
+      'react-hooks': (await import('eslint-plugin-react-hooks')).default,
+      '@tanstack/query': (await import('@tanstack/eslint-plugin-query')).default
     },
     rules: {
       'prettier/prettier': 'error',
       // 👉 Cảnh báo nếu thiếu deps trong Hooks
       'react-hooks/exhaustive-deps': 'warn',
-      '@typescript-eslint/no-explicit-any': 'off'
+      '@typescript-eslint/no-explicit-any': 'off',
+
+      ...(await import('@tanstack/eslint-plugin-query')).plugin.configs
+        .recommended.rules
     }
   },
 

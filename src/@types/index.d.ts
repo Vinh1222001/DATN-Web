@@ -3,7 +3,7 @@ declare module 'ui' {
 
   export interface ILayoutProps {
     children: ReactNode;
-    params: Promise<any>;
+    params?: Promise<any>;
   }
 
   export interface IPageProps extends Omit<ILayoutProps, 'children'> {}
@@ -12,5 +12,56 @@ declare module 'ui' {
 declare module 'ref' {
   export interface ISocketRef {
     sendMessage: (message: string) => void;
+  }
+}
+
+declare module 'hook' {
+  export interface IUseVideoStreamProps {
+    name: string;
+    url: string;
+    alt?: string;
+  }
+  export interface IUseVideoResult {
+    ref: any;
+    name: string;
+    src: string;
+    alt: string;
+  }
+}
+
+declare module 'service' {
+  import { SocketMessageType } from '@/constants/enum';
+  export interface ISocketMessageSend {
+    type: SocketMessageType;
+    time: string;
+    message: string;
+  }
+
+  export interface LineFollowerData {
+    leftMost: number | string;
+    left: number | string;
+    center: number | string;
+    right: number | string;
+    rightMost: number | string;
+    decision: string;
+  }
+
+  export interface ColorDetectorData {
+    red: string;
+    green: string;
+    blue: string;
+    color: string;
+  }
+
+  export interface ISocketMessage {
+    lineFollower?: LineFollowerData;
+    colorDetector?: ColorDetectorData;
+    productType?: string;
+  }
+
+  export interface ISocketMessageReceive {
+    type: SocketMessageType;
+    time: string;
+    message: ISocketMessage;
   }
 }

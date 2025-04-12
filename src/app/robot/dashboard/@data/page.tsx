@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import Socket from '../_components/Socket';
+import EspData from './_components/EspData';
 import Paper from '@/components/ui/layouts/Paper';
 import Typography from '@/components/ui/Typography';
 
@@ -10,7 +10,7 @@ const Page = () => {
         <Typography.Heading variant={'h2'}>Real Time Data</Typography.Heading>
       </Paper.Header>
       <Paper.Content>
-        <Socket />
+        <EspData />
       </Paper.Content>
     </Paper.Container>
   );

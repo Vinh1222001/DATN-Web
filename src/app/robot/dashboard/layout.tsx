@@ -1,6 +1,14 @@
 import Grid from '@/components/ui/layouts/Grid';
+import { Metadata } from 'next';
 import { memo, ReactNode } from 'react';
 import { ILayoutProps } from 'ui';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Dashboard',
+    description: 'Overview Robot'
+  };
+}
 
 interface IProps extends ILayoutProps {
   data: ReactNode;

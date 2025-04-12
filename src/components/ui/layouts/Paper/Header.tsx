@@ -12,7 +12,7 @@ const GAP_SIZES = {
   6: 'gap-6'
 } as const;
 
-const VARIANTS = cva('flex flex-col', {
+const VARIANTS = cva('flex flex-col mb-2', {
   variants: {
     gap: GAP_SIZES
   },
