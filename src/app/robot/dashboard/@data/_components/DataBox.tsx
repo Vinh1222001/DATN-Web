@@ -8,6 +8,7 @@ interface IProps {
   title: string;
   name: string;
   value: string | number;
+  type?: 'text' | 'color' | 'number';
 }
 
 const DataBox = (props: IProps) => {
@@ -23,7 +24,7 @@ const DataBox = (props: IProps) => {
         <Typography.Muted>{props.title}</Typography.Muted>
       </Label>
       <Input
-        type="text"
+        type={props.type ?? 'text'}
         id={`${props.name}-${id}`}
         value={props.value}
         disabled

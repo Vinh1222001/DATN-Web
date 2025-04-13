@@ -53,10 +53,19 @@ declare module 'service' {
     color: string;
   }
 
+  export interface ProductTypeData {
+    label: string;
+    accuration: number | string;
+    x: number | string;
+    y: numner | string;
+    width: number | string;
+    height: number | string;
+  }
+
   export interface ISocketMessage {
     lineFollower?: LineFollowerData;
     colorDetector?: ColorDetectorData;
-    productType?: string;
+    productType?: ProductTypeData;
   }
 
   export interface ISocketMessageReceive {

@@ -19,7 +19,7 @@ const VideoStream = (props: IProps) => {
 
   return (
     <Box className={'aspect-square bg-neutral-200'} width={'full'}>
-      <Image {...rest} alt={alt} unoptimized width={200} height={200} />
+      <Image {...rest} alt={alt} unoptimized width={500} height={500} />
     </Box>
   );
 };
