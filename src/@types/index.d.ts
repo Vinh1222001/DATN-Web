@@ -17,12 +17,13 @@ declare module 'ref' {
 
 declare module 'hook' {
   export interface IUseVideoStreamProps {
+    ref: any;
     name: string;
     url: string;
     alt?: string;
   }
   export interface IUseVideoResult {
-    ref: any;
+    // ref: any;
     name: string;
     src: string;
     alt: string;

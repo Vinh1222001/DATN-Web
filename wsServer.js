@@ -2,7 +2,7 @@
 const { networkInterfaces } = require('os');
 const WebSocket = require('ws');
 
-const SERVER_IP = networkInterfaces()?.wlp2s0?.[0].address ?? 'localhost';
+const SERVER_IP = '192.168.2.190';
 const SERVER_PORT = 8081;
 
 console.log(networkInterfaces());

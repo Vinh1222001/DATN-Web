@@ -5,6 +5,7 @@ import { ILayoutProps } from 'ui';
 import Portal from './portal';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { WebSocketProvider } from './providers/soket';
+import { GlobalRefProvider } from './providers/ref.video';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,9 +27,11 @@ const App = ({ children }: ILayoutProps) => {
   return (
     <QueryClientProvider client={queryClient}>
       <WebSocketProvider>
-        {children}
-        <Portal />
-        <ReactQueryDevtools initialIsOpen={false} />
+        <GlobalRefProvider>
+          {children}
+          <Portal />
+          <ReactQueryDevtools initialIsOpen={false} />
+        </GlobalRefProvider>
       </WebSocketProvider>
     </QueryClientProvider>
   );

@@ -40,7 +40,7 @@ export const WebSocketProvider = ({
 
   useEffect(() => {
     const ws = new WebSocket(
-      String(process.env.NEXT_PUBLIC_WEB_SOCKET_URL) ?? 'ws://localhost:8081'
+      `ws://${String(process.env.NEXT_PUBLIC_WEB_SOCKET_URL)}`
     );
     socketRef.current = ws;
 
